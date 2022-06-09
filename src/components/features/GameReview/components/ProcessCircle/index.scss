@@ -1,0 +1,27 @@
+.process-circle {
+    position: relative;
+    margin: 5px auto;
+    width: 220px;
+    height: 220px;
+}
+.process-circle canvas {
+    display: block;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.process-circle span {
+    color: #FFCB08;
+    display: block;
+    line-height: 200px;
+    text-align: center;
+    width: 200px;
+    font-family: sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.process-circle input {
+    width: 200px;
+}

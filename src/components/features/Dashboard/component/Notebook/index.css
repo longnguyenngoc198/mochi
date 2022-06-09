@@ -1,0 +1,7 @@
+.notebook__scroll{
+    overflow-y: auto;
+    height:73%
+}
+.notebook__scroll::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }

@@ -1,0 +1,33 @@
+.game-review__box-start{
+    position: absolute;
+    bottom: 0;
+    width: 88%;
+    overflow: hidden;
+
+    .game-review__box-process{
+        margin-top: 20px;
+        background: rgb(242, 242, 242);
+        height: 30px;
+        border-radius: 20px;
+        border: 5px solid white;
+    }
+    .text-description{
+        margin: 5px 0 100px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 14px;
+    }
+    .game-review__process{
+        width: 10%;
+        background: linear-gradient(83.47deg, #58CC02 9.02%, #23AC38 90.81%);
+        height: 100%;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p {
+            color: white;
+            font-weight: bold;
+        }
+    }
+}

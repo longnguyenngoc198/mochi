@@ -1,0 +1,71 @@
+
+.game-progressbar-container {
+        display: flex;
+        justify-content: space-between;
+    .game-exit-icon {
+        width: 20px;
+        cursor: pointer;
+    }
+    .game-progressbar-wrapper {
+        border-radius: 15px;
+        height: 20px;
+        width: 90%;
+        background: #eee;
+        .game-progressbar-bar {
+            background: linear-gradient(83.47deg, #FFCB08 9.02%, #FF9600 90.81%);
+            height: 100%;
+            border-radius: 15px;
+            position: relative;
+            animation: grow 8s linear;
+            .progress-mascot {
+                position: absolute;
+                right: -20px;
+                top: -15px;
+            }
+        }
+    }
+    
+    
+}
+.progress-bar-modal {
+    .modal-mascot {
+        width: 165px;
+    }
+    .mochi_secondary_btn-web.exit-btn {
+        max-width: 200px;
+        margin: 10px auto;
+        padding: 10px 20px;
+        background: #fdfdfd;
+    }
+}
+    .game-loading-wrapper {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 10000;
+    background-color: #ffffff00;
+    .game-loading {
+        width: 6rem;
+        height: 6rem;
+        margin: 20% 45%;
+    }
+}
+@keyframes grow {
+    0% {
+        width: 10%;
+    }
+    25% {
+        width: 25%;
+    }
+    50% {
+        width: 50%;
+    }
+    75% {
+        width: 7%;
+    }
+    100% {
+        width: 100%;
+    }
+}

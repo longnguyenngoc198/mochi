@@ -1,0 +1,14 @@
+.box-answer.incorrect{
+    background: rgba(235, 87, 87, 1)!important;
+}
+.box-answer.correct{
+    background: rgba(35, 172, 56, 1)!important;
+}
+.box-answer{
+    margin-top: 15px;
+    border-radius: 15px;
+    padding: 10px 25px;
+    color:white;
+    display: flex;
+    justify-content: space-between;
+}

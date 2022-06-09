@@ -1,0 +1,407 @@
+.game-container {
+    background-color: #f8f8f8;
+    height: 100vh;
+    overflow-x: hidden;
+
+    .game-main {
+        height: 100%;
+
+        .row {
+            height: 100%;
+        }
+    }
+
+    .game-main-content {
+        background-color: #ffffff;
+        padding: 40px 40px;
+        height: 100%;
+        position: relative;
+
+        .game-content {
+            margin: 30px auto 10px auto;
+        }
+    }
+
+    
+}
+
+.game-1-container {
+    .card-answer{
+        width: 100%;
+        background: white;
+        filter: drop-shadow(0px 4px 0px rgba(185, 185, 185, 0.267));
+        margin-top: 20px;
+        padding: 15px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .card-answer.success{
+        background: rgba(35, 172, 56, 1);
+        color: white;
+    }
+    .card-wrapper {
+        background-color: transparent;
+        width: 350px;
+        height: 450px;
+        perspective: 1000px;
+        margin: 0px auto;
+
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+
+            border-radius: 20px;
+        }
+
+        .card-front,
+        .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .card-front {
+            background-color: rgb(255, 255, 255);
+            color: black;
+            box-shadow: 6px 6px 2px 0 rgb(0 0 0 / 10%);
+            border-radius: 20px;
+        }
+
+        .card-back {
+            background-color: rgb(255, 255, 255);
+            color: black;
+            border-radius: 20px;
+            box-shadow: 6px 6px 2px 0 rgb(0 0 0 / 10%);
+            transform: rotateY(180deg);
+        }
+
+        .flip-card {
+            transform: rotateY(-180deg);
+        }
+
+        .card-main {
+            margin-top: 40px;
+            height: 100%;
+            width: 100%;
+            cursor: pointer;
+
+            .card-front-content {
+                margin-top: 50px;
+                text-align: center;
+
+                .card-content {
+                    font-size: 18px;
+                }
+
+                .card-kanji {
+                    font-weight: 600;
+                    margin-top: 10px;
+                    font-size: 24px;
+                }
+            }
+
+            .card-back-content {
+                .card-trans {
+                    font-size: 24px;
+                    font-weight: 700;
+                    margin-top: 10px;
+                }
+
+                .card-picture {
+                    border-radius: 10px;
+                    max-width: 250px;
+                }
+            }
+
+            img.card-icon {
+                max-width: 35px;
+                position: absolute;
+                bottom: 7px;
+                right: 5px;
+            }
+        }
+
+        .audio-container {
+            position: absolute;
+            display: flex;
+            top: -6%;
+            right: 29%;
+            align-items: center;
+
+            .round-btn {
+                background: #fff;
+                border-radius: 50%;
+                padding: 12px 10px;
+                box-shadow: 0px 4px 0px 0 rgb(0 0 0 / 10%);
+                margin-right: 10px;
+                cursor: pointer;
+                border: #f8f8f8 1px solid;
+
+                img {
+                    max-width: 35px;
+                }
+
+
+            }
+
+            .round-btn:hover {
+                opacity: 0.9;
+            }
+
+            .slow-icon {
+                width: 45px;
+                height: 45px;
+                display: flex;
+                padding: 8px;
+            }
+        }
+    }
+
+
+
+    .game-already-know {
+        text-align: center;
+        font-weight: 500;
+        color: #828282;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+.game-title {
+    color: #828282;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+}
+
+.card-trans {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+
+
+.game-2-container {
+    text-align: center;
+
+
+
+    .game-2-content {
+        margin: 20px auto;
+
+
+
+        .card-picture {
+            border-radius: 10px;
+            max-width: 250px;
+        }
+
+        .answer-wrapper {
+            margin: 20px auto;
+            max-width: 400px;
+
+            .select-answer {
+                max-width: 400px;
+                padding: 15px 20px;
+                background: #fff;
+                margin-bottom: 10px;
+                border-radius: 15px;
+                font-weight: 600;
+                box-shadow: 0px 3px 0px #dbd9d9;
+                cursor: pointer;
+
+                &.game-2-correct-answer {
+                    background-color: #23AC38;
+                    pointer-events: none;
+                    color: #fff;
+                }
+
+                &.game-2-incorrect-answer {
+                    background-color: #EB5757;
+                    pointer-events: none;
+                    color: #fff;
+                }
+
+                &.disabled-click {
+                    pointer-events: none;
+                }
+            }
+
+            .select-answer:hover {
+                background-color: rgba(238, 238, 238, 0.466);
+            }
+
+        }
+    }
+}
+
+.game-continue,
+.game-submit {
+    width: 200px;
+    margin: 40px auto 10px auto;
+    text-align: center;
+}
+
+// .pressed-btn {
+//     transform: scale(0.95);
+//     box-shadow: none !important
+// }
+
+.game-3-container {
+    text-align: center;
+    .list-characters-wrapper {
+        display: flex;
+        margin: 30px auto 10px auto;
+        width: 470px;
+        text-align: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        .select-character {
+            padding: 10px 15px;
+            margin: 7px 5px;
+            background: #23AC38;
+            border-radius: 6px;
+            box-shadow: 0px 2px #ffffff;
+            cursor: pointer;
+            font-weight: 500;
+            color: #fff;
+            font-size: 18px;
+            &.character-selected {
+                background: #CECCCC;
+                pointer-events: none;
+            }
+            &.submitted {
+                pointer-events: none;
+            }
+        }
+        .select-character:hover {
+            opacity: 0.9;
+        }
+    }
+    .list-answer-wrapper {
+        display: flex;
+        margin: 20px auto 10px auto;
+        max-width: 470px;
+        text-align: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        .empty-answer-wrapper {
+            margin: 33px auto;
+            width: 470px;
+            border-bottom: 1px solid #d7d6d6;
+        }
+        .answer-wrapper {
+            padding-bottom: 0px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .selected-character {
+            padding: 10px 15px;
+            margin: 10px 5px 5px 5px;
+            background: #CECCCC;
+            border-radius: 6px;
+            box-shadow: 0px 2px #fff;
+            cursor: pointer;
+            font-weight: 500;
+            color: #333;
+            font-size: 18px;
+            &.submitted {
+                pointer-events: none;
+            }
+        }
+
+        .selected-character:hover {
+            opacity: 0.9;
+        }
+    }
+}
+.modal-wrapper {
+    border-radius: 15px;
+    color: #fff;
+    display: flex;
+    padding: 15px 40px;
+    &.correct {
+        background: #52ad39;
+    }
+    &.incorrect {
+        background: #EB5757;
+    }
+    .word-modal-content {
+        flex: 3;
+        text-align: left;
+        margin-left: 20px;
+    }
+    p.word-content {
+        margin: 5px;
+    }
+    p.word-kanji {
+        margin: 5px;
+        font-weight: 600;
+        font-size: 20px;
+    }
+    p.word-sentience {
+        margin: 5px;
+    }
+    p.word-trans-sentience {
+        margin: 5px;
+    }
+    .action-btn {
+        background: #fff;
+        padding: 8px;
+        margin-bottom: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+        img {
+            width: 30px;
+        }
+    }
+}
+.ending-game-container {
+    .updating-wrapper {
+        text-align: center;
+        margin-top: 10px;
+        img.updating-mochi {
+            width: 220px;
+        }
+        p {
+            width: 300px;
+            margin: 10px auto;
+            font-size: 20px;
+            font-weight: 600;
+            span {
+                color: #FFCB08;
+            }
+        }
+        .loading-wrapper {
+            img {
+                width: 20px;
+                margin: 10px;
+            }
+        }
+    }
+}
+
+#input-game1{
+    border: 3px solid #FF9600;
+    border-radius: 10px;
+    height: 60px;
+    width: 100%;
+    margin-top: 50px;
+    padding: 20px
+}
+
+.ending-game__box-list-result-game-1{
+    background-color: white;
+    overflow-y: auto;
+    height: 230px;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
